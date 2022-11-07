@@ -28,8 +28,8 @@ Print the result to a txt file called 1NF
 
 We will then need to refactor to 2NF:
 
-- table must be in 1NF
-- no partial dependencies - Non-prime attributes must be fully dependant on the candidate key.
+- Database must be in 1NF
+- No partial dependencies - Non-prime attributes must be fully dependant on the candidate key.
 
 Print the result to a txt file called 2NF
 
@@ -37,8 +37,8 @@ Print the result to a txt file called 2NF
 
 Lastly refactor to 3NF:
 
-- must be in 1NF and 2NF
-- no transitive dependencies - fields must be determined by the primary / composite key
+- Must be in 1NF and 2NF
+- No transitive dependencies - fields must be determined by the primary / composite key
 
 Print the result to a txt file called 3NF
 
@@ -65,9 +65,7 @@ We need to show the links between all the tables we have created, so it's easy t
 
 The link above will take you to a very handy page where you can input your tables, to draw connections with how they interact with each other.
 
-Add the diagram to a file called ERD
-
-## Star Schema
+### Star Schema
 
 See [Warehouse Design Notes](https://notes.northcoders.com/courses/de-data/warehouse-design) for more info on star schema.
 
