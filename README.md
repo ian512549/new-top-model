@@ -11,8 +11,15 @@ We've been given the task of normalising some data on our models.
 The data we have is in the _models.sql_ file and it's a bit of a mess.
 In this sprint we are going to move the data into 1st, 2nd and 3rd normal forms.
 
+Run the provided file to create the Database and table.
+
+- Remember that you can print the output of the file to a new file with the command followed by >file_name
+
 [Data Normalisation Notes](https://notes.northcoders.com/courses/de-data/data-normalisation)
-Remember to use the notes to help!
+
+# Part I
+
+## Task I
 
 ## First Normal Form (1NF)
 
@@ -24,6 +31,8 @@ Firstly we need to refactor the table to 1NF. The rules we can follow are:
 
 Print the result to a txt file called 1NF
 
+## Task II
+
 ## Second Normal Form (2NF)
 
 We will then need to refactor to 2NF:
@@ -32,6 +41,8 @@ We will then need to refactor to 2NF:
 - No partial dependencies - Non-prime attributes must be fully dependant on the candidate key.
 
 Print the result to a txt file called 2NF
+
+## Task III
 
 ## Third Normal Form (3NF)
 
@@ -42,19 +53,15 @@ Lastly refactor to 3NF:
 
 Print the result to a txt file called 3NF
 
+## Task IV
+
 ## Query Tasks
 
 Lets put our tables to the test!
+You can find the tasks in the quires folder.
 Have a look through the [Advanced SQL Notes](https://notes.northcoders.com/courses/de-data/advanced-sql) to help you with these tasks.
 
-- Find the total revenue from the models located in Milan.
-- Find all the event dates of the models that the event price is more then £300.
-- Find all the models that have the agent of Verity and have a rating higher than 7.
-- Find the cost of the models who have event dates in June.
-- Update the models costs to have whole numbers
-- All the models are going on holiday together on the 12th September, remove the event date from any of the models that are working that day.
-
-Print the completed tasks to a txt file called tasks
+## Task V
 
 ## Entity Relationship Diagram (ERD)
 
@@ -64,16 +71,40 @@ We need a way to visualise what we have created, how are tables link together an
 We need to show the links between all the tables we have created, so it's easy to read and follow.
 
 The link above will take you to a very handy page where you can input your tables, to draw connections with how they interact with each other.
+You may have to do a little research here too!
+
+Save your design and place it in a file called ERD.
+
+# Part II
 
 ### Star Schema
 
-See [Warehouse Design Notes](https://notes.northcoders.com/courses/de-data/warehouse-design) for more info on star schema.
+The table building technique we want to use here is _Dimension Modelling_.
 
-As we can see querying these tables can become a bit troublesome, this is where the star schema comes in!
-We want to be able to query our data using SQL with as little joins as possible.
+This will make handling our analytical questions natural and straightforward.
+
+## Task I
+
+Using our original data you will need to make Fact and Dimension tables.
+
+- Remember to consider future queries to the dimension tables and add the information in if you thinks it's relevant.
+
+  - What weekday is the event date on? What year? Which part of the financial year is that?
+  - What countries are the models in?
+  - What do the brands want the models to wear?
 
 - We want to have one centralised table surrounded by dimension tables.
 - The central table will receive updates.
 - Querying should only need a single join for most queries.
+
+See [Warehouse Design Notes](https://notes.northcoders.com/courses/de-data/warehouse-design)
+
+## Task II
+
+<!-- Query questions here -->
+
+## Task III
+
+Create another ERD to show how out tables now link together.
 
 Add the diagram to a txt file called star.
