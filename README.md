@@ -2,109 +2,75 @@
 
 ## Learning Objectives
 
-- To Refactor to 1NF, 2NF and 3NF
-- Implement a star schema
-- To implement ERD
+-   To be able to refactor a table to 1NF, 2NF and 3NF
+-   To be able to implement a star schema
+-   To be able to implement an ERD
 
-Congrats! We've been hired by the Northcoders Models Department!
-We've been given the task of normalising some data on our models.
-The data we have is in the _models.sql_ file and it's a bit of a mess.
-In this sprint we are going to move the data into 1st, 2nd and 3rd normal forms.
+Congratulations! You've been hired by the Northcoders Modelling Agency! 💅
+All of the data we have on our models are currently being held in one big SQL table which you can create locally by running `models.sql`.
 
-Run the provided file to create the Database and table.
+Our task is to normalise the data:
 
-- Remember that you can print the output of the file to a new file with the command followed by >file_name
+-   Remember that you can print the output of the file to a new file with the command followed by >file_name
 
-[Data Normalisation Notes](https://notes.northcoders.com/courses/de-data/data-normalisation)
+## Part I - OLTP
 
-# Part I
-
-## Task I
-
-## First Normal Form (1NF)
+### 1. First Normal Form (1NF)
 
 Firstly we need to refactor the table to 1NF. The rules we can follow are:
 
-- We must have no duplicate rows
-- Each cell must only contain a single value
-- Each value cannot be split down further
+-   We must have no duplicate rows
+-   Each cell must only contain a single value
+-   Each value cannot be split down further
 
-Print the result to a txt file called 1NF
+Print the result to a txt file called `1NF.txt`
 
-## Task II
-
-## Second Normal Form (2NF)
+### 2. Second Normal Form (2NF)
 
 We will then need to refactor to 2NF:
 
-- Database must be in 1NF
-- No partial dependencies - Non-prime attributes must be fully dependant on the candidate key.
+-   Table must not violate the rules set out by 1NF
+-   No partial dependencies - Non-prime attributes must be fully dependant on the candidate key.
 
-Print the result to a txt file called 2NF
+Print the result to a txt file called `2NF.txt`
 
-## Task III
-
-## Third Normal Form (3NF)
+### 3. Third Normal Form (3NF)
 
 Lastly refactor to 3NF:
 
-- Must be in 1NF and 2NF
-- No transitive dependencies - fields must be determined by the primary / composite key
+-   Table must not violate the rules set out by 2NF
+-   No transitive dependencies - fields must be determined by the primary / composite key
 
-Print the result to a txt file called 3NF
+Print the result to a txt file called `3NF.txt`
 
-## Task IV
-
-## Query Tasks
+### 4. Query Tasks
 
 Lets put our tables to the test!
-You can find the tasks in the quires folder.
-Have a look through the [Advanced SQL Notes](https://notes.northcoders.com/courses/de-data/advanced-sql) to help you with these tasks.
+You can find the tasks in the queries folder.
 
-## Task V
+### 5. Entity Relationship Diagram (ERD)
 
-## Entity Relationship Diagram (ERD)
+An `ERD` is a helpful visual representation of how relational tables fit together in a database.
+Use the following free software to build an ERD to document the database in it's three forms.
+https://dbdiagram.io/home
+You can save a screen shot to this repo.
 
-[Draw ERD Diagrams](https://dbdiagram.io/home)
-We need a way to visualise what we have created, how are tables link together and we can do that with an ERD diagram.
+## Part II - OLAP
 
-We need to show the links between all the tables we have created, so it's easy to read and follow.
+### 1. Building a star schema
 
-The link above will take you to a very handy page where you can input your tables, to draw connections with how they interact with each other.
-You may have to do a little research here too!
+We want to make our database easier and more efficient to analyse.
+We should redesign the database into a star schema.
 
-Save your design and place it in a file called ERD.
+Things to consider:
 
-# Part II
+-   **dimensions** - what can we extract? What metrics will these allow us to measure?
+-   **facts** - what does this table look like? How can do we create the link to dimensions.
 
-### Star Schema
-
-The table building technique we want to use here is _Dimension Modelling_.
-
-This will make handling our analytical questions natural and straightforward.
-
-## Task I
-
-Using our original data you will need to make Fact and Dimension tables.
-
-- Remember to consider future queries to the dimension tables and add the information in if you thinks it's relevant.
-
-  - What weekday is the event date on? What year? Which part of the financial year is that?
-  - What countries are the models in?
-  - What do the brands want the models to wear?
-
-- We want to have one centralised table surrounded by dimension tables.
-- The central table will receive updates.
-- Querying should only need a single join for most queries.
-
-See [Warehouse Design Notes](https://notes.northcoders.com/courses/de-data/warehouse-design)
-
-## Task II
+## 2. Queries
 
 <!-- Query questions here -->
 
-## Task III
+## 3. Entity Relationship Diagram (ERD)
 
-Create another ERD to show how out tables now link together.
-
-Add the diagram to a txt file called star.
+Create another ERD to represent how our tables now link together.
