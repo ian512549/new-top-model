@@ -1,2 +1,2 @@
 
--- Find the total revinue from the models located in milan.
+-- Find the total revenue from the models located in milan.
