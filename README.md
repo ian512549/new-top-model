@@ -9,21 +9,32 @@
 Congratulations! You've been hired by the Northcoders Modelling Agency! 💅
 All of the data we have on our models are currently being held in one big SQL table which you can create locally by running `models.sql`.
 
-Our task is to normalise the data:
+---
 
--   Remember that you can print the output of the file to a new file with the command followed by >file_name
+## Our first task is to normalise the data **without mutating** our original data:
+
+-   Create new files for each of your Normal Forms
+-   Remember that you can print the output of the file to a new file with the command below:
+
+```
+psql -f file_name.sql > file_name.txt
+```
 
 ## Part I - OLTP
 
+---
+
 ### 1. First Normal Form (1NF)
 
-Firstly we need to refactor the table to 1NF. The rules we can follow are:
+The rules we can follow are:
 
 -   We must have no duplicate rows
 -   Each cell must only contain a single value
 -   Each value cannot be split down further
 
 Print the result to a txt file called `1NF.txt`
+
+<br>
 
 ### 2. Second Normal Form (2NF)
 
@@ -34,6 +45,8 @@ We will then need to refactor to 2NF:
 
 Print the result to a txt file called `2NF.txt`
 
+<br>
+
 ### 3. Third Normal Form (3NF)
 
 Lastly refactor to 3NF:
@@ -43,10 +56,14 @@ Lastly refactor to 3NF:
 
 Print the result to a txt file called `3NF.txt`
 
+<br>
+
 ### 4. Query Tasks
 
 Lets put our tables to the test!
 You can find the tasks in the queries folder.
+
+<br>
 
 ### 5. Entity Relationship Diagram (ERD)
 
@@ -54,6 +71,9 @@ An `ERD` is a helpful visual representation of how relational tables fit togethe
 Use the following free software to build an ERD to document the database in it's three forms.
 https://dbdiagram.io/home
 You can save a screen shot to this repo.
+
+<br>
+<br>
 
 ## Part II - OLAP
 
