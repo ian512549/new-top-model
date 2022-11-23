@@ -87,10 +87,8 @@ Things to consider:
 -   **dimensions** - what can we extract? What metrics will these allow us to measure?
 -   **facts** - what does this table look like? How can do we create the link to dimensions.
 
-## 2. Queries
 
-<!-- Query questions here -->
 
-## 3. Entity Relationship Diagram (ERD)
+## 2. Entity Relationship Diagram (ERD)
 
 Create another ERD to represent how our tables now link together.
