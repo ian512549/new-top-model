@@ -87,8 +87,10 @@ Things to consider:
 -   **dimensions** - what can we extract? What metrics will these allow us to measure?
 -   **facts** - what does this table look like? How can do we create the link to dimensions.
 
+## 2. Queries
 
+Time to query your star schema! Find your next set of queries in the star schema folder.
 
-## 2. Entity Relationship Diagram (ERD)
+## 3. Entity Relationship Diagram (ERD)
 
 Create another ERD to represent how our tables now link together.
