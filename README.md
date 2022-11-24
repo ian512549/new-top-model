@@ -69,7 +69,7 @@ Things to consider:
 
 ## 2. Queries
 
-<!-- Query questions here -->
+Time to query your star schema! Find your next set of queries in the star schema folder.
 
 ## 3. Entity Relationship Diagram (ERD)
 

@@ -1,0 +1,1 @@
+-- 1 - Verity has too much work and needs an assistant in their area, update the agents table to reflect the new team member. Verity's assistant will take over the models that work for Dior.
