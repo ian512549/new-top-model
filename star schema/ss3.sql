@@ -1,1 +1,0 @@
--- 3 - An event is scheduled for 20th January, which models are available, and how much would it cost to hire them?

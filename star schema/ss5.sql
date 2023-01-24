@@ -1,1 +1,0 @@
--- 5 - How much does it cost to hire all models that are represented by Paul & Rose?

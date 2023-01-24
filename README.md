@@ -56,24 +56,12 @@ Lastly refactor to 3NF:
 
 Print the result to a txt file called `3NF.txt`
 
-<br>
-
-### 4. Query Tasks
-
-Lets put our tables to the test!
-You can find the tasks in the queries folder.
-
-<br>
-
-### 5. Entity Relationship Diagram (ERD)
+### 4. Entity Relationship Diagram (ERD)
 
 An `ERD` is a helpful visual representation of how relational tables fit together in a database.
 Use the following free software to build an ERD to document the database in it's three forms.
 https://dbdiagram.io/home
 You can save a screen shot to this repo.
-
-<br>
-<br>
 
 ## Part II - OLAP
 
@@ -87,10 +75,6 @@ Things to consider:
 -   **dimensions** - what can we extract? What metrics will these allow us to measure?
 -   **facts** - what does this table look like? How can do we create the link to dimensions.
 
-## 2. Queries
-
-Time to query your star schema! Find your next set of queries in the star schema folder.
-
-## 3. Entity Relationship Diagram (ERD)
+## 2. Entity Relationship Diagram (ERD)
 
 Create another ERD to represent how our tables now link together.

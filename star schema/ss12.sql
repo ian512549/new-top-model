@@ -1,1 +1,0 @@
--- 12 - How many brands are represented by models from London?

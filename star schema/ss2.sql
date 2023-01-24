@@ -1,1 +1,0 @@
--- 2 - Sam Pagne has been dropped by Harrods due to questionable social media posts about Bounties in Celebrations, update the data accordingly.
