@@ -67,7 +67,9 @@ You can save a screen shot to this repo.
 
 <br>
 
-### 5. Update your Third Normal Form for the following request:
+### 5. Third Normal Form Queries
+
+ Update your Third Normal Form to reflect the following request, please do so by using queries to the database and _not mutating_ the original data:
 
 1. A new brand 'Atlantis Doromania' has hit the scene and wants to work with all models from London.
 
