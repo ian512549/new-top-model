@@ -104,7 +104,7 @@ Create another ERD to represent how our tables now link together.
 
 1. Which agent has the lowest rated models?
 
-2. Which model has worked the most events?
+2. Which model has worked the most events based on how much they charge per event and the total revenue so far?
 
 3. Which quarter is the busiest for our models?
 

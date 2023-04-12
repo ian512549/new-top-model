@@ -14,12 +14,12 @@ CREATE TABLE models
     brand TEXT,
     trait VARCHAR(60),
     rating INT, 
-    event_date TEXT, 
+    next_event_date TEXT, 
     revenue  FLOAT
 );
 
 INSERT INTO models
-    (model_name, area, price_per_event, category, agent, brand, trait, rating, event_date, revenue ) 
+    (model_name, area, price_per_event, category, agent, brand, trait, rating, next_event_date, revenue ) 
 VALUES
     ('Bartholomew P', 'Milan', 499.99, 'Fashion', 'Verity', 'Louboutin, H&M', 'Pro strutter', 7, '15 November 2022', 2999.94),
     ('Notso Neat', 'Online', 9.99, 'Promotional', 'Alex', 'Aldi, Poundland', 'The dadbod drop', 1, '12 September 2022', 149.85),
