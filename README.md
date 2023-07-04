@@ -90,7 +90,7 @@ We should redesign the database into a star schema.
 Things to consider:
 
 -   **dimensions** - what can we extract? What metrics will these allow us to measure?
--   **facts** - what does this table look like? How can do we create the link to dimensions.
+-   **facts** - what does this table look like? How can we create the link to dimensions.
 
 <br>
 
