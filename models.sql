@@ -264,14 +264,17 @@ where brand like '%,%';
 select * from models_brands;
 
 ---- 
-select model_id into london_models 
+select model_id, 'Atlantis Doromania' into london_models 
 from models
 where area ='London';
 
-
+alter table london_models
+rename column "?column?" to brand_name;
 
 select * from london_models;
 
--- insert into models_brands (model_id, brand_name)
--- values (model_from_london , 'Atlantis Doromania')
+insert into models_brands (model_id, brand_name)
+select model_id, brand_name
+from london_models;
 
+select * from models_brands;
