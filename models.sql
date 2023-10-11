@@ -235,29 +235,10 @@ VALUES
     ('Jemmie Cannop','Stockholm',13.34,'Promotional','Verity','Stella McCartney','knowing when it''s going to rain',2,'24 November 2025',8575.22),
     ('Deane Blinkhorn','Crewe',647.59,'Fashion','Katherine','Wayfair','Telepathic Yawn',6,'05 September 2025',3657.26),
     ('Lowrance Brattell','Athens',588.22,'Glamour','Verity','Poundland','Instantaneous Costume Changes',10,'24 February 2025',1849.79);
----FIRST NORMAL FORM
--- CREATE TABLE split_models
--- (
---     split_model_id SERIAL PRIMARY KEY,
---     model_name VARCHAR(100),
---     area VARCHAR(50),
---     price_per_event FLOAT,
---     category VARCHAR(100),
---     agent VARCHAR(50),
---     brand TEXT,
---     trait VARCHAR(60),
---     rating INT, 
---     next_event_date TEXT, 
---     revenue  FLOAT
--- );
 
--- insert into split_models (model_name, area, price_per_event, category, agent, brand, trait, rating, next_event_date, revenue)
--- SELECT 
--- model_name, area, price_per_event, category, agent, unnest(string_to_array(brand, ', ')) AS brand, trait, rating, next_event_date, revenue
--- FROM models;
+select * from models;
 
----SELECT * FROM split_models
----SECOND NORMAL FORM
+
 CREATE TABLE models_brands
 ( 
     models_brands_id SERIAL PRIMARY KEY,
@@ -265,19 +246,32 @@ CREATE TABLE models_brands
     brand_name VARCHAR(255)
 );
 
--- insert into models_brands (model_id, brand_name)
--- select model_id, brand
--- from models
--- where brand not like '%,%';
+insert into models_brands (model_id, brand_name)
+select model_id, brand
+from models
+where brand not like '%,%';
 
+select * from models_brands;
+
+------ 
 insert into models_brands (model_id, brand_name)
 SELECT
   model_id,
   unnest(string_to_array(brand, ', ')) AS brand
-FROM models;
+FROM models
+where brand like '%,%';
 
----select * from models_brands;
-SELECT model_id, model_name, area, price_per_event, category, agent, trait, rating, next_event_date, revenue
-FROM models;
+select * from models_brands;
 
-SELECT * FROM models_brands;
+---- 
+select model_id into london_models 
+from models
+where area ='London';
+
+
+
+select * from london_models;
+
+-- insert into models_brands (model_id, brand_name)
+-- values (model_from_london , 'Atlantis Doromania')
+
