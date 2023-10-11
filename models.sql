@@ -246,22 +246,22 @@ CREATE TABLE models_brands
     brand_name VARCHAR(255)
 );
 
-insert into models_brands
+insert into models_brands (model_id, brand_name)
 select model_id, brand
-from models;
--- where brand not like '%,%';
+from models
+where brand not like '%,%';
 
 select * from models_brands;
 
--- --- 
--- select model_id, brand
--- into model_brands
--- from models
--- where brand like '%,%';
+------ 
 
--- select * from model_brands;
+insert into models_brands (model_id, brand_name)
+SELECT
+  model_id,
+  unnest(string_to_array(brand, ', ')) AS brand
+FROM models
+where brand like '%,%';
 
--- SELECT
---   model_id,
---   unnest(string_to_array(brand, ', ')) AS brand
--- FROM model_brands;
+select * from models_brands;
+
+
