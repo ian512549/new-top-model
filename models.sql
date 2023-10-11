@@ -236,3 +236,32 @@ VALUES
     ('Deane Blinkhorn','Crewe',647.59,'Fashion','Katherine','Wayfair','Telepathic Yawn',6,'05 September 2025',3657.26),
     ('Lowrance Brattell','Athens',588.22,'Glamour','Verity','Poundland','Instantaneous Costume Changes',10,'24 February 2025',1849.79);
 
+select * from models;
+
+
+CREATE TABLE models_brands
+( 
+    models_brands_id SERIAL PRIMARY KEY,
+    model_id INT REFERENCES models(model_id),
+    brand_name VARCHAR(255)
+);
+
+insert into models_brands
+select model_id, brand
+from models;
+-- where brand not like '%,%';
+
+select * from models_brands;
+
+-- --- 
+-- select model_id, brand
+-- into model_brands
+-- from models
+-- where brand like '%,%';
+
+-- select * from model_brands;
+
+-- SELECT
+--   model_id,
+--   unnest(string_to_array(brand, ', ')) AS brand
+-- FROM model_brands;
