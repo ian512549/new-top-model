@@ -222,6 +222,8 @@ INSERT 0 214
 (214 rows)
 
 CREATE TABLE
+INSERT 0 214
+CREATE TABLE
 INSERT 0 205
  models_brands_id | model_id |    brand_name     
 ------------------+----------+-------------------
@@ -968,244 +970,278 @@ INSERT 0 32
               260 |      201 | Atlantis Doromania
 (260 rows)
 
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-            List of relations
- Schema |      Name       | Type  | Owner 
---------+-----------------+-------+-------
- public | dim_agents      | table | pav
- public | dim_areas       | table | pav
- public | dim_brands      | table | pav
- public | dim_categories  | table | pav
- public | dim_event_dates | table | pav
- public | dim_models      | table | pav
- public | fact_pricing    | table | pav
- public | london_models   | table | pav
- public | models          | table | pav
- public | models_brands   | table | pav
-(10 rows)
+ model_id | model_name | area  | price_per_event | category | agent  |    trait    | rating | next_event_date | revenue | models_brands_id | model_id | brand_name 
+----------+------------+-------+-----------------+----------+--------+-------------+--------+-----------------+---------+------------------+----------+------------
+       11 | Hannah Bee | Milan |             325 | Fashion  | Verity | Photography |      6 | 1 March 2022    |    1625 |              227 |       11 | Dior
+(1 row)
 
-INSERT 0 214
- model_id |      model_name      |              mode_trait              | model_rating 
-----------+----------------------+--------------------------------------+--------------
-        1 | Bartholomew P        | Pro strutter                         |            7
-        2 | Notso Neat           | The dadbod drop                      |            1
-        3 | Jarred MacKenzie     | Fire_eating                          |            4
-        4 | Rathbones Arr        | Hand modelling                       |            5
-        5 | Sarah B              | Influencer                           |            7
-        6 | Cat Wang             | Catwalker                            |            8
-        7 | Starr Schema         | Databases                            |            5
-        8 | Sam Pagne            | Old-money                            |            9
-        9 | Salle De Bain        | Architect                            |            3
-       10 | Slam Dunk            | High-tops                            |            9
-       11 | Hannah Bee           | Photography                          |            6
-       12 | Rainsface W          | Impromptu crying                     |            3
-       13 | Raul Pogerson        | Messy eating                         |            2
-       14 | Ray Z                | Card magic                           |            7
-       15 | Pat Munns            | Super Slow Motion                    |            9
-       16 | Kasper Topling       | Invisible Burping                    |            8
-       17 | Ulrika MacGarvey     | Telepathic Yawn                      |            5
-       18 | Gerrard Scorthorne   | handstands                           |            4
-       19 | Haskel McKinless     | Incredible Juggling Skills           |            2
-       20 | Gwenni Dubarry       | Incredible Nose Hair Growth          |           10
-       21 | Booth Innocenti      | Incredible Juggling Skills           |           10
-       22 | Bess Wildman         | Superhuman Lip Syncing               |            1
-       23 | Miles Newgrosh       | Extreme Paper Cut                    |            3
-       24 | Lynea Van den Bosch  | Super Slow Motion                    |            6
-       25 | Melantha Trowell     | Unlimited Laughter Generation        |            2
-       26 | Laryssa Gowthrop     | Mind Reading Comedy                  |            1
-       27 | Wolfgang Oxshott     | fall asleep anywhere                 |            9
-       28 | Alejandrina Bambrugh | finding loose change                 |            3
-       29 | Zenia Faich          | Incredible Juggling Skills           |            3
-       30 | Ashlie Seater        | Infinite Clumsiness                  |            8
-       31 | Jean Laval           | Unlimited Dance Moves                |            8
-       32 | Tally Durrad         | Infinite Clumsiness                  |            7
-       33 | Amie Pepler          | Turn Anything into a Dad Joke        |            7
-       34 | Selene Fowle         | Invisible Sneeze                     |            0
-       35 | Raimondo Causby      | Superhuman Hiccup Control            |            5
-       36 | Gilberta Leavey      | Unlimited Dance Moves                |            6
-       37 | Sergio Haversum      | double jointed thumbs                |            8
-       38 | Aridatha Ianinotti   | Infinite Dad Jokes                   |            5
-       39 | Jervis Mathey        | Instantaneous Spoon Bending          |            4
-       40 | Toinette Machon      | finding loose change                 |            4
-       41 | Carrie Gerling       | double jointed thumbs                |            7
-       42 | Ninetta Pettwood     | Instantaneous Spoon Bending          |            5
-       43 | Scot Connow          | Superhuman Lip Syncing               |            7
-       44 | Zandra Siggs         | Super Sticky Fingers                 |            3
-       45 | Carmon Orfeur        | Infinite Clumsiness                  |            8
-       46 | Meyer Potapczuk      | Unlimited Laughter Generation        |            6
-       47 | Melisandra Achurch   | Super Ticklish Fingers               |            5
-       48 | Hervey Fadell        | forgetting birthdays                 |            2
-       49 | Daron Humpage        | forgetting birthdays                 |            6
-       50 | Leodora Trembath     | Infinite Hiccups                     |            0
-       51 | Gregoor Pearne       | Superhuman Hiccup Control            |            2
-       52 | Tobin Eskell         | Unlimited Laughter Generation        |            2
-       53 | Eugenia McCraine     | Invisible Sneeze                     |            3
-       54 | Gus Disman           | movie quotes                         |            1
-       55 | Barbabas Biles       | Super Speed Typing                   |            3
-       56 | Titus Lexa           | fall asleep anywhere                 |            4
-       57 | Grethel Matantsev    | Infinite Clumsiness                  |            5
-       58 | Lesly Mallinar       | handstands                           |            9
-       59 | Agnesse Peniman      | Super Slow Motion                    |            9
-       60 | Bendick Douglass     | Super Ticklish Fingers               |            4
-       61 | Farleigh Dunsire     | lucky charm                          |            7
-       62 | Verena Houtby        | lucky charm                          |            2
-       63 | Yetty Wildblood      | double jointed thumbs                |            7
-       64 | Hagan Romanini       | Uncontrollable Tickling              |            0
-       65 | Coletta Jonson       | double jointed thumbs                |            0
-       66 | Jobyna Denisevich    | freckles on nose                     |            7
-       67 | Nels Jaumet          | finding loose change                 |            2
-       68 | Harman Callam        | forgetting birthdays                 |           10
-       69 | Roderick Piotrkowski | Extreme Paper Cut                    |            7
-       70 | Dniren Sulley        | parallel parking                     |           10
-       71 | Shanon Bodman        | finding loose change                 |            4
-       72 | Keven Tanby          | Mildly Annoying Whistle              |            3
-       73 | Filia Prest          | Unlimited Laughter Generation        |            8
-       74 | Margareta Sartain    | movie quotes                         |            7
-       75 | Janey Fluin          | handstands                           |            1
-       76 | Darill Rosenthal     | movie quotes                         |            3
-       77 | Theodoric Henze      | lucky charm                          |            6
-       78 | Delinda Raubenheim   | handstands                           |           10
-       79 | Haslett McTrustey    | Extreme Sarcasm Power                |            9
-       80 | Holly Thwaites       | freckles on nose                     |            1
-       81 | Georgie Sweetman     | handstands                           |            2
-       82 | Stacey Congreve      | fall asleep anywhere                 |            0
-       83 | Corbie Jillings      | Infinite Hiccups                     |            0
-       84 | Kennie Phipp         | lucky charm                          |           10
-       85 | Pryce Tolotti        | Super Ticklish Fingers               |            2
-       86 | Marji Semorad        | Superhuman Hiccup Control            |            6
-       87 | Kissie Jandel        | Super Sticky Fingers                 |            2
-       88 | Halimeda Cordeix     | Invisible Sneeze                     |           10
-       89 | Orin Smuth           | Super Sticky Fingers                 |            6
-       90 | Constanta Teas       | Instantaneous Spoon Bending          |            3
-       91 | Mano Arnecke         | perfect pitch                        |            5
-       92 | Dona Whittleton      | Instantaneous Costume Changes        |            7
-       93 | Margareta Hooks      | wiggle ears                          |            2
-       94 | Livvy Brattan        | Instantaneous Costume Changes        |            9
-       95 | Skyler Arend         | parallel parking                     |            9
-       96 | Jeni Michel          | double jointed thumbs                |            6
-       97 | Ajay Giametti        | wiggle ears                          |            3
-       98 | Micaela Galliford    | Telepathic Puns                      |            0
-       99 | Rayshell Beresfore   | Invisible Burping                    |            2
-      100 | Whitman Neads        | parallel parking                     |            2
-      101 | Nadia Grimmer        | Infinite Clumsiness                  |            3
-      102 | Lucie Demer          | Unlimited Laughter Generation        |            3
-      103 | Violette Tombleson   | Mildly Annoying Whistle              |            4
-      104 | Jozef Esler          | human GPS                            |            7
-      105 | Jamey Golley         | double jointed thumbs                |            5
-      106 | Colin Palatini       | double jointed thumbs                |            4
-      107 | Delilah Ducker       | Invisible Burping                    |            5
-      108 | Regen Aldrin         | Invisible Sneeze                     |            4
-      109 | Millard Longhorn     | wiggle ears                          |            2
-      110 | Bayard Camilleri     | Superhuman Hiccup Control            |            2
-      111 | Jacky Ibbeson        | Invisible Sneeze                     |            2
-      112 | Jared Slimming       | knowing when it's going to rain      |            1
-      113 | Hervey Mickleburgh   | Super Slow Motion                    |            4
-      114 | Drugi St. Leger      | finding loose change                 |            1
-      115 | Cyb Pryn             | touch nose with tongue               |            0
-      116 | Ingemar Gaul         | Extreme Sarcasm Power                |            5
-      117 | Millard Scurrer      | Unlimited Dance Moves                |            6
-      118 | Sibyl Strathman      | forgetting birthdays                 |            1
-      119 | Janella Clearie      | Super Ticklish Fingers               |            0
-      120 | Kyle Bester          | handstands                           |            1
-      121 | Anna diane Blondin   | freckles on nose                     |            3
-      122 | Marcello Filliskirk  | movie quotes                         |            7
-      123 | Toni Drei            | Unbreakable Shoelaces                |            7
-      124 | Orv Hurle            | Incredible Nose Hair Growth          |            6
-      125 | Karil Jerwood        | handstands                           |            4
-      126 | Devan Henrie         | freckles on nose                     |            7
-      127 | Dorie Sperwell       | movie quotes                         |            5
-      128 | Hale Fairburn        | finding loose change                 |            7
-      129 | Lenard Lumm          | Invisible Sneeze                     |            2
-      130 | Celka Paladino       | Extreme Paper Cut                    |            7
-      131 | Lona Firks           | freckles on nose                     |            2
-      132 | Bank Hurl            | human GPS                            |            7
-      133 | Sheela Illsley       | Super Ticklish Fingers               |            0
-      134 | Sammy Mohun          | Instantaneous Spoon Bending          |            9
-      135 | Anatole Fearnyhough  | Invisible Air Guitar Playing         |            3
-      136 | Carey Stennes        | Telepathic Yawn                      |            8
-      137 | Ber Cawkwell         | freckles on nose                     |            8
-      138 | Bettina Brahmer      | Telepathic Yawn                      |            4
-      139 | Clemens Gaythorpe    | wiggle ears                          |            1
-      140 | Dalli Wicklen        | perfect pitch                        |            5
-      141 | Tildi Grigoryov      | Mildly Annoying Whistle              |            5
-      142 | Phylis Wildor        | Telepathic Puns                      |            8
-      143 | Donna Spofford       | Invisible Sneeze                     |            9
-      144 | Nanny Camerana       | Superhuman Lip Syncing               |            1
-      145 | Melina Heilds        | Superhuman Lip Syncing               |            3
-      146 | Monti Titlow         | Extreme Paper Cut                    |            8
-      147 | Giacopo Cubley       | Turn Anything into a Dad Joke        |            2
-      148 | West Tattersill      | forgetting birthdays                 |            4
-      149 | Shepard Rawcliffe    | Turn Anything into a Dad Joke        |            5
-      150 | Waldo Dary           | Incredible Nose Hair Growth          |            6
-      151 | Daveta Mather        | Incredible Juggling Skills           |           10
-      152 | Robinson Sapsforde   | Telepathic Puns                      |            5
-      153 | Bjorn Tootin         | perfect pitch                        |           10
-      154 | Cristal Jorck        | perfect pitch                        |            9
-      155 | Brandice Lamberton   | Unbreakable Shoelaces                |            0
-      156 | Auguste Fisbey       | Infinite Dad Jokes                   |            3
-      157 | Amber Nisuis         | Incredible Nose Hair Growth          |            8
-      158 | Zared Hartropp       | Incredible Nose Hair Growth          |            3
-      159 | Morlee Thomtson      | Uncontrollable Tickling              |            9
-      160 | Kenny Petrelluzzi    | wiggle ears                          |            3
-      161 | Veronica Guidoni     | touch nose with tongue               |            7
-      162 | Cloris Durrell       | Ability to Speak in Animal Languages |            6
-      163 | Ingeberg Wooderson   | fall asleep anywhere                 |            0
-      164 | Vince Dendon         | Infinite Hiccups                     |            7
-      165 | La verne Scroxton    | Uncontrollable Tickling              |            3
-      166 | Even Fayerbrother    | Super Sticky Fingers                 |            2
-      167 | Lottie Oulner        | Infinite Clumsiness                  |            4
-      168 | Ker Kidman           | Unlimited Dance Moves                |            3
-      169 | Codie Warters        | Turn Anything into a Dad Joke        |            6
-      170 | Tito Naisbit         | Extreme Rubber Face Flexibility      |            5
-      171 | Tomkin Soan          | Invisible Sneeze                     |            7
-      172 | Lotty Kristoffersen  | Infinite Dad Jokes                   |           10
-      173 | Esma Penning         | Incredible Nose Hair Growth          |            6
-      174 | Tony Rime            | Incredible Juggling Skills           |            7
-      175 | Evangelia Cristea    | Invisible Air Guitar Playing         |            8
-      176 | Tyrone Beckmann      | Extreme Paper Cut                    |            8
-      177 | Sharai Vines         | Mind Reading Comedy                  |            4
-      178 | Eveline De Paoli     | handstands                           |            9
-      179 | Janel Speechley      | Infinite Dad Jokes                   |            2
-      180 | Nancey Moores        | wiggle ears                          |           10
-      181 | Hilton Budding       | Ability to Speak in Animal Languages |            9
-      182 | Rodrique Shackell    | Instantaneous Spoon Bending          |            3
-      183 | Dredi Wharby         | Mildly Annoying Whistle              |            9
-      184 | Joelie Bolmann       | Extreme Rubber Face Flexibility      |            3
-      185 | Mil Stivers          | lucky charm                          |            6
-      186 | Melissa Albers       | Uncontrollable Tickling              |            0
-      187 | Anatol Culligan      | Superhuman Lip Syncing               |            4
-      188 | Merlina Beamson      | Extreme Paper Cut                    |            5
-      189 | Ernestus Dyer        | Invisible Sneeze                     |           10
-      190 | Raquela Kalkhoven    | parallel parking                     |            0
-      191 | Bili Wilkins         | finding loose change                 |            2
-      192 | Wye Ferebee          | movie quotes                         |            6
-      193 | Jackie Preon         | lucky charm                          |            6
-      194 | Patrice Ferrier      | Super Ticklish Fingers               |            4
-      195 | Fanchon Strass       | Incredible Nose Hair Growth          |            2
-      196 | Adriano Carrick      | touch nose with tongue               |            6
-      197 | Corette Forgan       | Invisible Air Guitar Playing         |            3
-      198 | Lyndsay Schirak      | wiggle ears                          |            6
-      199 | Johnny Tambling      | lucky charm                          |           10
-      200 | Constantin Hagard    | Telepathic Yawn                      |            7
-      201 | Shannon Dougharty    | handstands                           |            2
-      202 | Orly Gasking         | fall asleep anywhere                 |            1
-      203 | Stanleigh Garwood    | Super Slow Motion                    |            6
-      204 | Flossy Thurling      | Infinite Dad Jokes                   |            7
-      205 | Patrice Philippson   | touch nose with tongue               |            9
-      206 | Kiley Hafner         | freckles on nose                     |            7
-      207 | Fabe Naden           | Instantaneous Costume Changes        |            0
-      208 | Jarrod Lorriman      | Super Speed Typing                   |            1
-      209 | Reena Dunkersley     | lucky charm                          |            3
-      210 | Julianna Togwell     | Super Slow Motion                    |            2
-      211 | Joanna Cogdon        | Uncontrollable Tickling              |            9
-      212 | Jemmie Cannop        | knowing when it's going to rain      |            2
-      213 | Deane Blinkhorn      | Telepathic Yawn                      |            6
-      214 | Lowrance Brattell    | Instantaneous Costume Changes        |           10
-(214 rows)
+UPDATE 1
+ model_id | model_name | area  | price_per_event | category |       agent        |    trait    | rating | next_event_date | revenue | models_brands_id | model_id | brand_name 
+----------+------------+-------+-----------------+----------+--------------------+-------------+--------+-----------------+---------+------------------+----------+------------
+       11 | Hannah Bee | Milan |             325 | Fashion  | Verity's Assistant | Photography |      6 | 1 March 2022    |    1625 |              227 |       11 | Dior
+(1 row)
+
+DELETE 8
+ model_name | brand_name 
+------------+------------
+ Sam Pagne  | HSBC
+(1 row)
+
+INSERT 0 1
+ models_brands_id | model_id |     brand_name     
+------------------+----------+--------------------
+                1 |        4 | Adidas
+                2 |        6 | Charities
+                3 |       12 | United Utilities
+                4 |       13 | Listo Burritos
+                5 |       14 | Marvel Studios
+                6 |       15 | Versace
+                7 |       16 | Ikea
+                8 |       17 | Patagonia
+                9 |       18 | Salomon
+               10 |       19 | Amazon
+               11 |       20 | Versace
+               12 |       21 | Valentino
+               13 |       22 | HSBC
+               14 |       23 | Marks and Spencer
+               15 |       24 | Gucci
+               16 |       25 | Oricle
+               17 |       26 | Marks and Spencer
+               18 |       27 | Givenchy
+               19 |       28 | Instagram
+               20 |       29 | Marks and Spencer
+               22 |       31 | HSBC
+               23 |       32 | Chanel
+               24 |       33 | Charities
+               25 |       34 | Poundland
+               26 |       35 | Chanel
+               27 |       36 | Fendi
+               28 |       37 | Chanel
+               29 |       38 | Instagram
+               30 |       39 | Instagram
+               31 |       40 | Gucci
+               32 |       41 | Stella McCartney
+               33 |       42 | Prada
+               34 |       43 | Vinted
+               35 |       44 | Prada
+               36 |       45 | Salomon
+               37 |       46 | Reebok
+               38 |       47 | Poundland
+               39 |       48 | HSBC
+               40 |       49 | Salomon
+               41 |       50 | Adidas
+               42 |       51 | HSBC
+               43 |       52 | Louboutin
+               44 |       53 | Fendi
+               45 |       54 | Charities
+               46 |       55 | Ebay
+               47 |       56 | Dior
+               48 |       57 | Salomon
+               49 |       58 | Charities
+               50 |       59 | Louboutin
+               51 |       60 | Versace
+               52 |       61 | Chanel
+               53 |       62 | Salomon
+               54 |       63 | Stella McCartney
+               55 |       64 | Ikea
+               56 |       65 | Louboutin
+               57 |       66 | Patagonia
+               58 |       67 | Prada
+               59 |       68 | Balenciaga
+               60 |       69 | Fendi
+               61 |       70 | Poundland
+               62 |       71 | Adidas
+               63 |       72 | Patagonia
+               64 |       73 | Oricle
+               65 |       74 | Aldi
+               66 |       75 | Aldi
+               67 |       76 | HSBC
+               68 |       77 | Gucci
+               69 |       78 | Ebay
+               70 |       79 | Charities
+               71 |       80 | Adidas
+               72 |       81 | Amazon
+               73 |       82 | Dior
+               74 |       83 | Versace
+               75 |       84 | Ebay
+               76 |       85 | Buff
+               77 |       86 | Salomon
+               78 |       87 | Ikea
+               79 |       88 | Gucci
+               80 |       89 | Chanel
+               81 |       90 | Chanel
+               82 |       91 | Prada
+               83 |       92 | Salomon
+               84 |       93 | Stella McCartney
+               85 |       94 | Oricle
+               86 |       95 | Nike
+               87 |       96 | Vinted
+               88 |       97 | Louboutin
+               89 |       98 | Prada
+               90 |       99 | Buff
+               91 |      100 | Instagram
+               92 |      101 | Salomon
+               93 |      102 | Louis Vuitton
+               94 |      103 | Ebay
+               95 |      104 | Dior
+               96 |      105 | HSBC
+               97 |      106 | Wayfair
+               98 |      107 | Adidas
+               99 |      108 | Adidas
+              100 |      109 | Amazon
+              101 |      110 | Charities
+              103 |      112 | Oricle
+              104 |      113 | Aldi
+              106 |      115 | Oricle
+              107 |      116 | Ikea
+              108 |      117 | Buff
+              109 |      118 | H&M
+              110 |      119 | Buff
+              111 |      120 | Vinted
+              112 |      121 | Salomon
+              113 |      122 | Charities
+              114 |      123 | Balenciaga
+              115 |      124 | Oricle
+              116 |      125 | H&M
+              117 |      126 | Balenciaga
+              118 |      127 | Salomon
+              119 |      128 | Amazon
+              120 |      129 | HSBC
+              121 |      130 | HSBC
+              122 |      131 | Patagonia
+              123 |      132 | Versace
+              124 |      133 | Vinted
+              125 |      134 | H&M
+              126 |      135 | Balenciaga
+              127 |      136 | Instagram
+              128 |      137 | Charities
+              129 |      138 | Adidas
+              130 |      139 | H&M
+              131 |      140 | Givenchy
+              132 |      141 | HSBC
+              133 |      142 | H&M
+              134 |      143 | Versace
+              135 |      144 | Chanel
+              137 |      146 | Marks and Spencer
+              138 |      147 | Wayfair
+              139 |      148 | Versace
+              140 |      149 | HSBC
+              141 |      150 | Versace
+              142 |      151 | Ikea
+              143 |      152 | Reebok
+              146 |      155 | Chanel
+              147 |      156 | Ebay
+              148 |      157 | Prada
+              149 |      158 | Marks and Spencer
+              150 |      159 | Wayfair
+              151 |      160 | Louis Vuitton
+              152 |      161 | Reebok
+              154 |      163 | Valentino
+              155 |      164 | Prada
+              156 |      165 | Oricle
+              157 |      166 | Poundland
+              158 |      167 | Versace
+              159 |      168 | Fendi
+              160 |      169 | Givenchy
+              161 |      170 | Salomon
+              162 |      171 | Aldi
+              163 |      172 | Vinted
+              164 |      173 | Buff
+              165 |      174 | Stella McCartney
+              166 |      175 | Wayfair
+              167 |      176 | Louboutin
+              168 |      177 | Adidas
+              169 |      178 | Buff
+              170 |      179 | Salomon
+              171 |      180 | Oricle
+              172 |      181 | Louboutin
+              173 |      182 | Amazon
+              174 |      183 | Fendi
+              175 |      184 | Aldi
+              176 |      185 | Nike
+              177 |      186 | Reebok
+              178 |      187 | Stella McCartney
+              179 |      188 | Buff
+              180 |      189 | Marks and Spencer
+              181 |      190 | Nike
+              182 |      191 | Reebok
+              183 |      192 | Adidas
+              184 |      193 | Marks and Spencer
+              185 |      194 | Stella McCartney
+              186 |      195 | Vinted
+              187 |      196 | Prada
+              188 |      197 | Fendi
+              189 |      198 | Nike
+              190 |      199 | Oricle
+              191 |      200 | Chanel
+              192 |      201 | Ebay
+              193 |      202 | Ebay
+              194 |      203 | Salomon
+              195 |      204 | Ebay
+              196 |      205 | Wayfair
+              197 |      206 | Fendi
+              198 |      207 | Ikea
+              199 |      208 | Valentino
+              200 |      209 | Dior
+              201 |      210 | Marks and Spencer
+              202 |      211 | Patagonia
+              203 |      212 | Stella McCartney
+              204 |      213 | Wayfair
+              205 |      214 | Poundland
+              206 |        1 | Louboutin
+              207 |        1 | H&M
+              208 |        2 | Aldi
+              209 |        2 | Poundland
+              210 |        3 | Patagonia
+              211 |        3 | Buff
+              212 |        3 | Salomon
+              213 |        5 | Ebay
+              214 |        5 | Vinted
+              215 |        5 | Instagram
+              216 |        7 | Oricle
+              217 |        7 | Marks and Spencer
+              219 |        8 | HSBC
+              220 |        9 | Ikea
+              221 |        9 | Wayfair
+              222 |        9 | Amazon
+              223 |       10 | Nike
+              224 |       10 | Adidas
+              225 |       10 | Reebok
+              226 |       11 | Chanel
+              227 |       11 | Dior
+              228 |       11 | Stella McCartney
+              229 |        4 | Atlantis Doromania
+              230 |       14 | Atlantis Doromania
+              231 |       17 | Atlantis Doromania
+              232 |       24 | Atlantis Doromania
+              233 |       27 | Atlantis Doromania
+              234 |       28 | Atlantis Doromania
+              235 |       31 | Atlantis Doromania
+              236 |       41 | Atlantis Doromania
+              237 |       57 | Atlantis Doromania
+              238 |       58 | Atlantis Doromania
+              239 |       59 | Atlantis Doromania
+              240 |       64 | Atlantis Doromania
+              241 |       68 | Atlantis Doromania
+              242 |       71 | Atlantis Doromania
+              243 |       73 | Atlantis Doromania
+              244 |       76 | Atlantis Doromania
+              245 |       79 | Atlantis Doromania
+              246 |       82 | Atlantis Doromania
+              247 |      130 | Atlantis Doromania
+              248 |      135 | Atlantis Doromania
+              249 |      141 | Atlantis Doromania
+              250 |      161 | Atlantis Doromania
+              251 |      166 | Atlantis Doromania
+              252 |      168 | Atlantis Doromania
+              253 |      173 | Atlantis Doromania
+              254 |      183 | Atlantis Doromania
+              255 |      185 | Atlantis Doromania
+              256 |      187 | Atlantis Doromania
+              257 |      189 | Atlantis Doromania
+              258 |      190 | Atlantis Doromania
+              259 |      199 | Atlantis Doromania
+              260 |      201 | Atlantis Doromania
+              261 |      215 | Aldi
+(253 rows)
 

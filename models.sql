@@ -251,11 +251,11 @@ CREATE TABLE second_form_models(
     revenue  FLOAT
 );
 
-insert into second_form_models(model_id, model_name, area, price_per_event, category, agent, trait, rating, next_event_date, revenue)
-SELECT model_id, model_name, area, price_per_event, category, agent, trait, rating, next_event_date, revenue
+insert into second_form_models(model_name, area, price_per_event, category, agent, trait, rating, next_event_date, revenue)
+SELECT model_name, area, price_per_event, category, agent, trait, rating, next_event_date, revenue
 from models;
 
-SELECT * FROM second_form_models;
+
 
 CREATE TABLE models_brands
 ( 
@@ -313,3 +313,26 @@ agent = 'Verity' AND brand_name = 'Dior';
 SELECT * FROM second_form_models
 JOIN models_brands ON second_form_models.model_id = models_brands.model_id
 WHERE agent = 'Verity''s Assistant' AND brand_name = 'Dior';
+
+
+--Question 3:
+delete from models_brands
+using second_form_models where model_name = 'Sam Pagne' and brand_name = 'Harrods';
+
+select model_name, brand_name
+from models_brands
+join second_form_models on second_form_models.model_id = models_brands.model_id
+where model_name = 'Sam Pagne'; -- and brand_name = 'Harrods';
+
+--Question 4.
+with new_model as (insert into second_form_models(model_name, area, price_per_event, category, agent, trait, rating, next_event_date, revenue)
+values
+('New model', 'AreaA', 20, 'Category', 'Rose', 'Browser', 4, '31 August 202', 5000)
+returning model_id)
+
+insert into models_brands(model_id, brand_name)
+select model_id, 'Aldi'
+from new_model;
+
+
+SELECT * FROM models_brands;
