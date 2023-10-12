@@ -325,3 +325,52 @@ INSERT INTO dim_models
  FROM models;
 
  select * from dim_models;
+
+INSERT INTO dim_categories
+ (category_name)
+ SELECT DISTINCT category
+ FROM models;
+
+SELECT * FROM dim_categories;
+
+INSERT INTO dim_brands
+ (brand_name)
+ SELECT DISTINCT brand
+ FROM models;
+
+SELECT * FROM dim_brands;
+
+INSERT INTO dim_areas
+ (area_name)
+ SELECT DISTINCT area
+ FROM models;
+
+SELECT * FROM dim_areas;
+
+INSERT INTO dim_agents
+ (agent_name)
+ SELECT DISTINCT agent
+ FROM models;
+
+SELECT * FROM dim_agents;
+
+INSERT INTO dim_event_dates
+ (event_date)
+ SELECT DISTINCT next_event_date
+ FROM models;
+
+SELECT * FROM dim_event_dates;
+
+INSERT INTO fact_pricing
+ (price_per_event, revenue)
+ SELECT price_per_event, revenue
+ FROM models;
+ 
+INSERT INTO fact_pricing
+ (model_id)
+ SELECT model_id
+ FROM dim_models;
+
+SELECT * FROM fact_pricing
+
+
