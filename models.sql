@@ -321,33 +321,32 @@ CREATE TABLE dim_models (
     model_name VARCHAR(255),
     mode_trait VARCHAR(255),
     model_rating INT
+);
 
-)
-
-CREATE TABLE dim_category (
+CREATE TABLE dim_categories (
     category_id SERIAL PRIMARY KEY,
     category_name VARCHAR(255)
-)
+);
 
-CREATE TABLE dim_brand (
+CREATE TABLE dim_brands (
     brand_id SERIAL PRIMARY KEY,
     brand_name VARCHAR(255)
-)
+);
 
 CREATE TABLE dim_areas (
     area_id SERIAL PRIMARY KEY,
     area_name VARCHAR(255)
-)
+);
 
-CREATE TABLE dim_agent (
+CREATE TABLE dim_agents (
     agent_id SERIAL PRIMARY KEY,
     agent_name VARCHAR(255)
-)
+);
 
 CREATE TABLE dim_event_dates (
     event_date_id SERIAL PRIMARY KEY,
     event_date TEXT
-)
+);
 
 
 CREATE TABLE fact_pricing (
@@ -356,7 +355,9 @@ CREATE TABLE fact_pricing (
     brand_id INT REFERENCES dim_brands(brand_id),
     area_id INT REFERENCES dim_areas(area_id),
     agent_id INT REFERENCES dim_agents(agent_id),
-    event_date_id INT REFERENCES dim_event_dates(event_date_id)
+    event_date_id INT REFERENCES dim_event_dates(event_date_id),
     price_per_event FLOAT,
     revenue FLOAT
-    )
+    );
+
+\dt

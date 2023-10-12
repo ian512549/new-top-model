@@ -968,3 +968,25 @@ INSERT 0 32
               260 |      201 | Atlantis Doromania
 (260 rows)
 
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+            List of relations
+ Schema |      Name       | Type  | Owner 
+--------+-----------------+-------+-------
+ public | dim_agents      | table | pav
+ public | dim_areas       | table | pav
+ public | dim_brands      | table | pav
+ public | dim_categories  | table | pav
+ public | dim_event_dates | table | pav
+ public | dim_models      | table | pav
+ public | fact_pricing    | table | pav
+ public | london_models   | table | pav
+ public | models          | table | pav
+ public | models_brands   | table | pav
+(10 rows)
+
