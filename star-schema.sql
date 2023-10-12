@@ -367,10 +367,7 @@ JOIN dim_categories ON dim_categories.category_name = models.category
 JOIN dim_brands ON dim_brands.brand_name = models.brand
 JOIN dim_areas ON dim_areas.area_name = models.area
 JOIN dim_agents ON dim_agents.agent_name = models.agent
-JOIN dim_event_dates ON dim_event_dates.event_date = models.next_event_date
-
-
-;
+JOIN dim_event_dates ON dim_event_dates.event_date = models.next_event_date;
 
 SELECT * FROM fact_pricing
 
