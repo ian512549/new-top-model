@@ -276,34 +276,34 @@ VALUES
 
 CREATE TABLE dim_models (
     model_id SERIAL PRIMARY KEY,
-    model_name VARCHAR(255),
-    mode_trait VARCHAR(255),
-    model_rating INT
+    model_name VARCHAR(255) DEFAULT 0,
+    mode_trait VARCHAR(255) DEFAULT 0,
+    model_rating INT DEFAULT 0
 );
 
 CREATE TABLE dim_categories (
     category_id SERIAL PRIMARY KEY,
-    category_name VARCHAR(255)
+    category_name VARCHAR(255) DEFAULT 0
 );
 
 CREATE TABLE dim_brands (
     brand_id SERIAL PRIMARY KEY,
-    brand_name VARCHAR(255)
+    brand_name VARCHAR(255) DEFAULT 0
 );
 
 CREATE TABLE dim_areas (
     area_id SERIAL PRIMARY KEY,
-    area_name VARCHAR(255)
+    area_name VARCHAR(255) DEFAULT 0
 );
 
 CREATE TABLE dim_agents (
     agent_id SERIAL PRIMARY KEY,
-    agent_name VARCHAR(255)
+    agent_name VARCHAR(255) DEFAULT 0
 );
-
+ 
 CREATE TABLE dim_event_dates (
     event_date_id SERIAL PRIMARY KEY,
-    event_date TEXT
+    event_date TEXT DEFAULT 0
 );
 
 CREATE TABLE fact_pricing (
@@ -313,8 +313,8 @@ CREATE TABLE fact_pricing (
     area_id INT REFERENCES dim_areas(area_id),
     agent_id INT REFERENCES dim_agents(agent_id),
     event_date_id INT REFERENCES dim_event_dates(event_date_id),
-    price_per_event FLOAT,
-    revenue FLOAT
+    price_per_event FLOAT DEFAULT 0,
+    revenue FLOAT DEFAULT 0
     );
 
 \dt
@@ -361,15 +361,16 @@ INSERT INTO dim_event_dates
 
 SELECT * FROM dim_event_dates;
 
-INSERT INTO fact_pricing
- (price_per_event, revenue)
- SELECT price_per_event, revenue
- FROM models;
- 
-INSERT INTO fact_pricing
- (model_id)
- SELECT model_id
- FROM dim_models;
+INSERT INTO fact_pricing (model_id, category_id, brand_id, area_id, agent_id, event_date_id, price_per_event, revenue)
+SELECT model_id, category_id, brand_id, area_id, agent_id, event_date_id, price_per_event, revenue FROM models
+JOIN dim_categories ON dim_categories.category_name = models.category
+JOIN dim_brands ON dim_brands.brand_name = models.brand
+JOIN dim_areas ON dim_areas.area_name = models.area
+JOIN dim_agents ON dim_agents.agent_name = models.agent
+JOIN dim_event_dates ON dim_event_dates.event_date = models.next_event_date
+
+
+;
 
 SELECT * FROM fact_pricing
 
