@@ -1,6 +1,6 @@
 DROP DATABASE
 CREATE DATABASE
-You are now connected to database "topmodelsql" as user "pav".
+You are now connected to database "topmodelsql" as user "ian".
 CREATE TABLE
 INSERT 0 214
 CREATE TABLE
@@ -13,14 +13,14 @@ CREATE TABLE
             List of relations
  Schema |      Name       | Type  | Owner 
 --------+-----------------+-------+-------
- public | dim_agents      | table | pav
- public | dim_areas       | table | pav
- public | dim_brands      | table | pav
- public | dim_categories  | table | pav
- public | dim_event_dates | table | pav
- public | dim_models      | table | pav
- public | fact_pricing    | table | pav
- public | models          | table | pav
+ public | dim_agents      | table | ian
+ public | dim_areas       | table | ian
+ public | dim_brands      | table | ian
+ public | dim_categories  | table | ian
+ public | dim_event_dates | table | ian
+ public | dim_models      | table | ian
+ public | fact_pricing    | table | ian
+ public | models          | table | ian
 (8 rows)
 
 INSERT 0 214
@@ -760,5 +760,35 @@ INSERT 0 214
   model_name   | number_of_events  
 ---------------+-------------------
  Jemmie Cannop | 642.8200899550225
+(1 row)
+
+ quarter | total 
+---------+-------
+       1 |    60
+(1 row)
+
+ quarter |        sum        
+---------+-------------------
+       1 | 333437.3300000001
+(1 row)
+
+ category_name |    sum    
+---------------+-----------
+ Promotional   | 199934.97
+(1 row)
+
+ count | area_name 
+-------+-----------
+    22 | London
+(1 row)
+
+        sum        
+-------------------
+ 33698.09000000001
+(1 row)
+
+ agent_name | count 
+------------+-------
+ Christian  |    26
 (1 row)
 

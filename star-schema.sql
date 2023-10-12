@@ -402,3 +402,86 @@ select model_name, number_of_events
 from num_of_events_per_model
 where number_of_events = (select max(number_of_events) from num_of_events_per_model);
 
+--question 3:
+WITH quarter_totals AS (
+select
+        case
+            when event_date ~* 'January|February|March' then 1
+            when event_date ~* 'April|May|June' then 2
+            when event_date ~* 'July|August|September' then 3
+            when event_date ~* 'October|November|December' then 4
+        end as quarter, 
+        COUNT(*) AS total
+        from
+        fact_pricing
+        join dim_event_dates on dim_event_dates.event_date_id = fact_pricing.event_date_id
+        join dim_models on dim_models.model_id = fact_pricing.model_id
+    GROUP BY quarter
+)
+
+SELECT quarter, total
+FROM quarter_totals
+WHERE total = (SELECT MAX(total) FROM quarter_totals);
+--question 4:
+WITH quarter_totals AS (
+select
+        case
+            when event_date ~* 'January|February|March' then 1
+            when event_date ~* 'April|May|June' then 2
+            when event_date ~* 'July|August|September' then 3
+            when event_date ~* 'October|November|December' then 4
+        end as quarter, 
+        SUM(fact_pricing.revenue),
+        COUNT(*) AS total
+        from
+        fact_pricing
+        join dim_event_dates on dim_event_dates.event_date_id = fact_pricing.event_date_id
+        join dim_models on dim_models.model_id = fact_pricing.model_id
+    GROUP BY quarter
+)
+
+SELECT quarter, sum
+FROM quarter_totals
+WHERE total = (SELECT MAX(total) FROM quarter_totals);
+
+--question 5:
+WITH revenue_by_category as(
+select dim_categories.category_name, SUM(revenue)
+from fact_pricing
+join dim_categories on dim_categories.category_id = fact_pricing.category_id
+GROUP BY dim_categories.category_name
+)
+
+select category_name, sum
+from revenue_by_category
+where sum = (SELECT MAX(sum) from revenue_by_category);
+
+-- --question 6:
+SELECT COUNT(DISTINCT dim_brands.brand_name), dim_areas.area_name
+FROM fact_pricing
+JOIN dim_brands ON dim_brands.brand_id = fact_pricing.brand_id
+JOIN dim_areas ON dim_areas.area_id = fact_pricing.area_id
+WHERE area_name = 'London'
+GROUP BY area_name;
+
+-- --question 7:
+SELECT SUM(price_per_event)
+FROM fact_pricing
+JOIN dim_agents ON dim_agents.agent_id = fact_pricing.agent_id
+WHERE agent_name = 'Paul' OR agent_name = 'Rose';
+
+-- --question 8:
+
+
+WITH agent_brand_count AS
+(
+SELECT dim_agents.agent_name, COUNT(DISTINCT dim_brands.brand_name)
+FROM fact_pricing
+JOIN dim_agents ON dim_agents.agent_id = fact_pricing.agent_id
+JOIN dim_brands ON dim_brands.brand_id = fact_pricing.brand_id
+GROUP BY agent_name
+)
+
+SELECT agent_name, count
+FROM agent_brand_count
+WHERE count = (SELECT MAX(count) FROM agent_brand_count);
