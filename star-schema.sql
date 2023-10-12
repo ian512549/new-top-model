@@ -369,6 +369,36 @@ JOIN dim_areas ON dim_areas.area_name = models.area
 JOIN dim_agents ON dim_agents.agent_name = models.agent
 JOIN dim_event_dates ON dim_event_dates.event_date = models.next_event_date;
 
-SELECT * FROM fact_pricing
+SELECT * FROM fact_pricing;
 
+-- TASK 8
+
+-- 1. Which agent has the lowest rated models?
+
+with avg_ratings as
+(
+select dim_agents.agent_name, avg(dim_models.model_rating)
+from fact_pricing
+join dim_models on dim_models.model_id = fact_pricing.model_id
+join dim_agents on dim_agents.agent_id = fact_pricing.agent_id
+group by agent_name
+)
+select agent_name, avg
+from avg_ratings
+where avg = (select min(avg) from avg_ratings);
+
+-- 2. Which model has worked the most events based on how much they charge per event and the total revenue so far?
+
+-- num of events: revenue / price_per_event
+-- select model with max(num of events)
+
+with num_of_events_per_model as 
+(
+select dim_models.model_name, fact_pricing.revenue / fact_pricing.price_per_event as number_of_events
+from fact_pricing
+join dim_models on dim_models.model_id = fact_pricing.model_id
+)
+select model_name, number_of_events
+from num_of_events_per_model
+where number_of_events = (select max(number_of_events) from num_of_events_per_model);
 

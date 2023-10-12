@@ -1,6 +1,6 @@
 DROP DATABASE
 CREATE DATABASE
-You are now connected to database "topmodelsql" as user "ian".
+You are now connected to database "topmodelsql" as user "pav".
 CREATE TABLE
 INSERT 0 214
 CREATE TABLE
@@ -13,14 +13,14 @@ CREATE TABLE
             List of relations
  Schema |      Name       | Type  | Owner 
 --------+-----------------+-------+-------
- public | dim_agents      | table | ian
- public | dim_areas       | table | ian
- public | dim_brands      | table | ian
- public | dim_categories  | table | ian
- public | dim_event_dates | table | ian
- public | dim_models      | table | ian
- public | fact_pricing    | table | ian
- public | models          | table | ian
+ public | dim_agents      | table | pav
+ public | dim_areas       | table | pav
+ public | dim_brands      | table | pav
+ public | dim_categories  | table | pav
+ public | dim_event_dates | table | pav
+ public | dim_models      | table | pav
+ public | fact_pricing    | table | pav
+ public | models          | table | pav
 (8 rows)
 
 INSERT 0 214
@@ -751,4 +751,14 @@ INSERT 0 214
        67 |           2 |       35 |       7 |        3 |           200 |          921.94 | 3398.12
        35 |           3 |       19 |       7 |        3 |           201 |          860.55 | 1266.66
 (214 rows)
+
+ agent_name |        avg         
+------------+--------------------
+ Alex       | 3.9545454545454545
+(1 row)
+
+  model_name   | number_of_events  
+---------------+-------------------
+ Jemmie Cannop | 642.8200899550225
+(1 row)
 
