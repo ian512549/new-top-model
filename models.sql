@@ -278,3 +278,85 @@ select model_id, brand_name
 from london_models;
 
 select * from models_brands;
+
+--- DAY 2: BUILDING A STAR SCHEMA:
+
+--  dim_models
+--  model_id
+--  model_name
+--  model_trait?
+--  model_rating
+
+-- dim_category
+-- id
+-- category_name
+
+-- dim_brand
+-- id
+-- brand_name
+
+-- dim_area
+-- id
+-- area_name
+
+-- dim_agent
+-- id
+-- agent_name
+
+-- dim_date
+
+-- fact_pricing
+-- model_id (references dim_models)
+-- category_id (references dim_category)
+-- brand_id (references dim_brand)
+-- area_id (references dim_area)
+-- agent_id (references dim_agent)
+-- date_id (references dim_date)
+-- price_per_event
+-- revenue
+
+
+CREATE TABLE dim_models (
+    model_id SERIAL PRIMARY KEY,
+    model_name VARCHAR(255),
+    mode_trait VARCHAR(255),
+    model_rating INT
+
+)
+
+CREATE TABLE dim_category (
+    category_id SERIAL PRIMARY KEY,
+    category_name VARCHAR(255)
+)
+
+CREATE TABLE dim_brand (
+    brand_id SERIAL PRIMARY KEY,
+    brand_name VARCHAR(255)
+)
+
+CREATE TABLE dim_areas (
+    area_id SERIAL PRIMARY KEY,
+    area_name VARCHAR(255)
+)
+
+CREATE TABLE dim_agent (
+    agent_id SERIAL PRIMARY KEY,
+    agent_name VARCHAR(255)
+)
+
+CREATE TABLE dim_event_dates (
+    event_date_id SERIAL PRIMARY KEY,
+    event_date TEXT
+)
+
+
+CREATE TABLE fact_pricing (
+    model_id INT REFERENCES dim_models(model_id),
+    category_id INT REFERENCES dim_categories(category_id),
+    brand_id INT REFERENCES dim_brands(brand_id),
+    area_id INT REFERENCES dim_areas(area_id),
+    agent_id INT REFERENCES dim_agents(agent_id),
+    event_date_id INT REFERENCES dim_event_dates(event_date_id)
+    price_per_event FLOAT,
+    revenue FLOAT
+    )
