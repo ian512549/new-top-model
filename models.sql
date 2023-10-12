@@ -238,11 +238,29 @@ VALUES
 
 select * from models;
 
+CREATE TABLE second_form_models(
+    model_id SERIAL PRIMARY KEY,
+    model_name VARCHAR(100),
+    area VARCHAR(50),
+    price_per_event FLOAT,
+    category VARCHAR(100),
+    agent VARCHAR(50),
+    trait VARCHAR(60),
+    rating INT, 
+    next_event_date TEXT, 
+    revenue  FLOAT
+);
+
+insert into second_form_models(model_id, model_name, area, price_per_event, category, agent, trait, rating, next_event_date, revenue)
+SELECT model_id, model_name, area, price_per_event, category, agent, trait, rating, next_event_date, revenue
+from models;
+
+SELECT * FROM second_form_models;
 
 CREATE TABLE models_brands
 ( 
     models_brands_id SERIAL PRIMARY KEY,
-    model_id INT REFERENCES models(model_id),
+    model_id INT REFERENCES second_form_models(model_id),
     brand_name VARCHAR(255)
 );
 
@@ -263,7 +281,7 @@ where brand like '%,%';
 
 select * from models_brands;
 
----- 
+----Question 1:
 select model_id, 'Atlantis Doromania' into london_models 
 from models
 where area ='London';
@@ -279,3 +297,7 @@ from london_models;
 
 select * from models_brands;
 
+--Question 2:
+SELECT * FROM models
+JOIN models_brands ON models.model_id = models_brands.model_id
+WHERE agent = 'Verity' AND brand_name = 'Dior'
