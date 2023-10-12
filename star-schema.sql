@@ -236,46 +236,92 @@ VALUES
     ('Deane Blinkhorn','Crewe',647.59,'Fashion','Katherine','Wayfair','Telepathic Yawn',6,'05 September 2025',3657.26),
     ('Lowrance Brattell','Athens',588.22,'Glamour','Verity','Poundland','Instantaneous Costume Changes',10,'24 February 2025',1849.79);
 
-select * from models;
+
+--- DAY 2: BUILDING A STAR SCHEMA:
+
+--  dim_models
+--  model_id
+--  model_name
+--  model_trait?
+--  model_rating
+
+-- dim_category
+-- id
+-- category_name
+
+-- dim_brand
+-- id
+-- brand_name
+
+-- dim_area
+-- id
+-- area_name
+
+-- dim_agent
+-- id
+-- agent_name
+
+-- dim_date
+
+-- fact_pricing
+-- model_id (references dim_models)
+-- category_id (references dim_category)
+-- brand_id (references dim_brand)
+-- area_id (references dim_area)
+-- agent_id (references dim_agent)
+-- date_id (references dim_date)
+-- price_per_event
+-- revenue
 
 
-CREATE TABLE models_brands
-( 
-    models_brands_id SERIAL PRIMARY KEY,
-    model_id INT REFERENCES models(model_id),
+CREATE TABLE dim_models (
+    model_id SERIAL PRIMARY KEY,
+    model_name VARCHAR(255),
+    mode_trait VARCHAR(255),
+    model_rating INT
+);
+
+CREATE TABLE dim_categories (
+    category_id SERIAL PRIMARY KEY,
+    category_name VARCHAR(255)
+);
+
+CREATE TABLE dim_brands (
+    brand_id SERIAL PRIMARY KEY,
     brand_name VARCHAR(255)
 );
 
-insert into models_brands (model_id, brand_name)
-select model_id, brand
-from models
-where brand not like '%,%';
+CREATE TABLE dim_areas (
+    area_id SERIAL PRIMARY KEY,
+    area_name VARCHAR(255)
+);
 
-select * from models_brands;
+CREATE TABLE dim_agents (
+    agent_id SERIAL PRIMARY KEY,
+    agent_name VARCHAR(255)
+);
 
------- 
-insert into models_brands (model_id, brand_name)
-SELECT
-  model_id,
-  unnest(string_to_array(brand, ', ')) AS brand
-FROM models
-where brand like '%,%';
+CREATE TABLE dim_event_dates (
+    event_date_id SERIAL PRIMARY KEY,
+    event_date TEXT
+);
 
-select * from models_brands;
+CREATE TABLE fact_pricing (
+    model_id INT REFERENCES dim_models(model_id),
+    category_id INT REFERENCES dim_categories(category_id),
+    brand_id INT REFERENCES dim_brands(brand_id),
+    area_id INT REFERENCES dim_areas(area_id),
+    agent_id INT REFERENCES dim_agents(agent_id),
+    event_date_id INT REFERENCES dim_event_dates(event_date_id),
+    price_per_event FLOAT,
+    revenue FLOAT
+    );
 
----- 
-select model_id, 'Atlantis Doromania' into london_models 
-from models
-where area ='London';
+\dt
 
-alter table london_models
-rename column "?column?" to brand_name;
+INSERT INTO dim_models
+ (model_id, model_name, mode_trait, model_rating)
+ SELECT model_id, model_name, trait, rating
+ FROM models;
 
-select * from london_models;
-
-insert into models_brands (model_id, brand_name)
-select model_id, brand_name
-from london_models;
-
-select * from models_brands;
-
+ select * from dim_models;

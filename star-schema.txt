@@ -1,0 +1,244 @@
+DROP DATABASE
+CREATE DATABASE
+You are now connected to database "topmodelsql" as user "pav".
+CREATE TABLE
+INSERT 0 214
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+            List of relations
+ Schema |      Name       | Type  | Owner 
+--------+-----------------+-------+-------
+ public | dim_agents      | table | pav
+ public | dim_areas       | table | pav
+ public | dim_brands      | table | pav
+ public | dim_categories  | table | pav
+ public | dim_event_dates | table | pav
+ public | dim_models      | table | pav
+ public | fact_pricing    | table | pav
+ public | models          | table | pav
+(8 rows)
+
+INSERT 0 214
+ model_id |      model_name      |              mode_trait              | model_rating 
+----------+----------------------+--------------------------------------+--------------
+        1 | Bartholomew P        | Pro strutter                         |            7
+        2 | Notso Neat           | The dadbod drop                      |            1
+        3 | Jarred MacKenzie     | Fire_eating                          |            4
+        4 | Rathbones Arr        | Hand modelling                       |            5
+        5 | Sarah B              | Influencer                           |            7
+        6 | Cat Wang             | Catwalker                            |            8
+        7 | Starr Schema         | Databases                            |            5
+        8 | Sam Pagne            | Old-money                            |            9
+        9 | Salle De Bain        | Architect                            |            3
+       10 | Slam Dunk            | High-tops                            |            9
+       11 | Hannah Bee           | Photography                          |            6
+       12 | Rainsface W          | Impromptu crying                     |            3
+       13 | Raul Pogerson        | Messy eating                         |            2
+       14 | Ray Z                | Card magic                           |            7
+       15 | Pat Munns            | Super Slow Motion                    |            9
+       16 | Kasper Topling       | Invisible Burping                    |            8
+       17 | Ulrika MacGarvey     | Telepathic Yawn                      |            5
+       18 | Gerrard Scorthorne   | handstands                           |            4
+       19 | Haskel McKinless     | Incredible Juggling Skills           |            2
+       20 | Gwenni Dubarry       | Incredible Nose Hair Growth          |           10
+       21 | Booth Innocenti      | Incredible Juggling Skills           |           10
+       22 | Bess Wildman         | Superhuman Lip Syncing               |            1
+       23 | Miles Newgrosh       | Extreme Paper Cut                    |            3
+       24 | Lynea Van den Bosch  | Super Slow Motion                    |            6
+       25 | Melantha Trowell     | Unlimited Laughter Generation        |            2
+       26 | Laryssa Gowthrop     | Mind Reading Comedy                  |            1
+       27 | Wolfgang Oxshott     | fall asleep anywhere                 |            9
+       28 | Alejandrina Bambrugh | finding loose change                 |            3
+       29 | Zenia Faich          | Incredible Juggling Skills           |            3
+       30 | Ashlie Seater        | Infinite Clumsiness                  |            8
+       31 | Jean Laval           | Unlimited Dance Moves                |            8
+       32 | Tally Durrad         | Infinite Clumsiness                  |            7
+       33 | Amie Pepler          | Turn Anything into a Dad Joke        |            7
+       34 | Selene Fowle         | Invisible Sneeze                     |            0
+       35 | Raimondo Causby      | Superhuman Hiccup Control            |            5
+       36 | Gilberta Leavey      | Unlimited Dance Moves                |            6
+       37 | Sergio Haversum      | double jointed thumbs                |            8
+       38 | Aridatha Ianinotti   | Infinite Dad Jokes                   |            5
+       39 | Jervis Mathey        | Instantaneous Spoon Bending          |            4
+       40 | Toinette Machon      | finding loose change                 |            4
+       41 | Carrie Gerling       | double jointed thumbs                |            7
+       42 | Ninetta Pettwood     | Instantaneous Spoon Bending          |            5
+       43 | Scot Connow          | Superhuman Lip Syncing               |            7
+       44 | Zandra Siggs         | Super Sticky Fingers                 |            3
+       45 | Carmon Orfeur        | Infinite Clumsiness                  |            8
+       46 | Meyer Potapczuk      | Unlimited Laughter Generation        |            6
+       47 | Melisandra Achurch   | Super Ticklish Fingers               |            5
+       48 | Hervey Fadell        | forgetting birthdays                 |            2
+       49 | Daron Humpage        | forgetting birthdays                 |            6
+       50 | Leodora Trembath     | Infinite Hiccups                     |            0
+       51 | Gregoor Pearne       | Superhuman Hiccup Control            |            2
+       52 | Tobin Eskell         | Unlimited Laughter Generation        |            2
+       53 | Eugenia McCraine     | Invisible Sneeze                     |            3
+       54 | Gus Disman           | movie quotes                         |            1
+       55 | Barbabas Biles       | Super Speed Typing                   |            3
+       56 | Titus Lexa           | fall asleep anywhere                 |            4
+       57 | Grethel Matantsev    | Infinite Clumsiness                  |            5
+       58 | Lesly Mallinar       | handstands                           |            9
+       59 | Agnesse Peniman      | Super Slow Motion                    |            9
+       60 | Bendick Douglass     | Super Ticklish Fingers               |            4
+       61 | Farleigh Dunsire     | lucky charm                          |            7
+       62 | Verena Houtby        | lucky charm                          |            2
+       63 | Yetty Wildblood      | double jointed thumbs                |            7
+       64 | Hagan Romanini       | Uncontrollable Tickling              |            0
+       65 | Coletta Jonson       | double jointed thumbs                |            0
+       66 | Jobyna Denisevich    | freckles on nose                     |            7
+       67 | Nels Jaumet          | finding loose change                 |            2
+       68 | Harman Callam        | forgetting birthdays                 |           10
+       69 | Roderick Piotrkowski | Extreme Paper Cut                    |            7
+       70 | Dniren Sulley        | parallel parking                     |           10
+       71 | Shanon Bodman        | finding loose change                 |            4
+       72 | Keven Tanby          | Mildly Annoying Whistle              |            3
+       73 | Filia Prest          | Unlimited Laughter Generation        |            8
+       74 | Margareta Sartain    | movie quotes                         |            7
+       75 | Janey Fluin          | handstands                           |            1
+       76 | Darill Rosenthal     | movie quotes                         |            3
+       77 | Theodoric Henze      | lucky charm                          |            6
+       78 | Delinda Raubenheim   | handstands                           |           10
+       79 | Haslett McTrustey    | Extreme Sarcasm Power                |            9
+       80 | Holly Thwaites       | freckles on nose                     |            1
+       81 | Georgie Sweetman     | handstands                           |            2
+       82 | Stacey Congreve      | fall asleep anywhere                 |            0
+       83 | Corbie Jillings      | Infinite Hiccups                     |            0
+       84 | Kennie Phipp         | lucky charm                          |           10
+       85 | Pryce Tolotti        | Super Ticklish Fingers               |            2
+       86 | Marji Semorad        | Superhuman Hiccup Control            |            6
+       87 | Kissie Jandel        | Super Sticky Fingers                 |            2
+       88 | Halimeda Cordeix     | Invisible Sneeze                     |           10
+       89 | Orin Smuth           | Super Sticky Fingers                 |            6
+       90 | Constanta Teas       | Instantaneous Spoon Bending          |            3
+       91 | Mano Arnecke         | perfect pitch                        |            5
+       92 | Dona Whittleton      | Instantaneous Costume Changes        |            7
+       93 | Margareta Hooks      | wiggle ears                          |            2
+       94 | Livvy Brattan        | Instantaneous Costume Changes        |            9
+       95 | Skyler Arend         | parallel parking                     |            9
+       96 | Jeni Michel          | double jointed thumbs                |            6
+       97 | Ajay Giametti        | wiggle ears                          |            3
+       98 | Micaela Galliford    | Telepathic Puns                      |            0
+       99 | Rayshell Beresfore   | Invisible Burping                    |            2
+      100 | Whitman Neads        | parallel parking                     |            2
+      101 | Nadia Grimmer        | Infinite Clumsiness                  |            3
+      102 | Lucie Demer          | Unlimited Laughter Generation        |            3
+      103 | Violette Tombleson   | Mildly Annoying Whistle              |            4
+      104 | Jozef Esler          | human GPS                            |            7
+      105 | Jamey Golley         | double jointed thumbs                |            5
+      106 | Colin Palatini       | double jointed thumbs                |            4
+      107 | Delilah Ducker       | Invisible Burping                    |            5
+      108 | Regen Aldrin         | Invisible Sneeze                     |            4
+      109 | Millard Longhorn     | wiggle ears                          |            2
+      110 | Bayard Camilleri     | Superhuman Hiccup Control            |            2
+      111 | Jacky Ibbeson        | Invisible Sneeze                     |            2
+      112 | Jared Slimming       | knowing when it's going to rain      |            1
+      113 | Hervey Mickleburgh   | Super Slow Motion                    |            4
+      114 | Drugi St. Leger      | finding loose change                 |            1
+      115 | Cyb Pryn             | touch nose with tongue               |            0
+      116 | Ingemar Gaul         | Extreme Sarcasm Power                |            5
+      117 | Millard Scurrer      | Unlimited Dance Moves                |            6
+      118 | Sibyl Strathman      | forgetting birthdays                 |            1
+      119 | Janella Clearie      | Super Ticklish Fingers               |            0
+      120 | Kyle Bester          | handstands                           |            1
+      121 | Anna diane Blondin   | freckles on nose                     |            3
+      122 | Marcello Filliskirk  | movie quotes                         |            7
+      123 | Toni Drei            | Unbreakable Shoelaces                |            7
+      124 | Orv Hurle            | Incredible Nose Hair Growth          |            6
+      125 | Karil Jerwood        | handstands                           |            4
+      126 | Devan Henrie         | freckles on nose                     |            7
+      127 | Dorie Sperwell       | movie quotes                         |            5
+      128 | Hale Fairburn        | finding loose change                 |            7
+      129 | Lenard Lumm          | Invisible Sneeze                     |            2
+      130 | Celka Paladino       | Extreme Paper Cut                    |            7
+      131 | Lona Firks           | freckles on nose                     |            2
+      132 | Bank Hurl            | human GPS                            |            7
+      133 | Sheela Illsley       | Super Ticklish Fingers               |            0
+      134 | Sammy Mohun          | Instantaneous Spoon Bending          |            9
+      135 | Anatole Fearnyhough  | Invisible Air Guitar Playing         |            3
+      136 | Carey Stennes        | Telepathic Yawn                      |            8
+      137 | Ber Cawkwell         | freckles on nose                     |            8
+      138 | Bettina Brahmer      | Telepathic Yawn                      |            4
+      139 | Clemens Gaythorpe    | wiggle ears                          |            1
+      140 | Dalli Wicklen        | perfect pitch                        |            5
+      141 | Tildi Grigoryov      | Mildly Annoying Whistle              |            5
+      142 | Phylis Wildor        | Telepathic Puns                      |            8
+      143 | Donna Spofford       | Invisible Sneeze                     |            9
+      144 | Nanny Camerana       | Superhuman Lip Syncing               |            1
+      145 | Melina Heilds        | Superhuman Lip Syncing               |            3
+      146 | Monti Titlow         | Extreme Paper Cut                    |            8
+      147 | Giacopo Cubley       | Turn Anything into a Dad Joke        |            2
+      148 | West Tattersill      | forgetting birthdays                 |            4
+      149 | Shepard Rawcliffe    | Turn Anything into a Dad Joke        |            5
+      150 | Waldo Dary           | Incredible Nose Hair Growth          |            6
+      151 | Daveta Mather        | Incredible Juggling Skills           |           10
+      152 | Robinson Sapsforde   | Telepathic Puns                      |            5
+      153 | Bjorn Tootin         | perfect pitch                        |           10
+      154 | Cristal Jorck        | perfect pitch                        |            9
+      155 | Brandice Lamberton   | Unbreakable Shoelaces                |            0
+      156 | Auguste Fisbey       | Infinite Dad Jokes                   |            3
+      157 | Amber Nisuis         | Incredible Nose Hair Growth          |            8
+      158 | Zared Hartropp       | Incredible Nose Hair Growth          |            3
+      159 | Morlee Thomtson      | Uncontrollable Tickling              |            9
+      160 | Kenny Petrelluzzi    | wiggle ears                          |            3
+      161 | Veronica Guidoni     | touch nose with tongue               |            7
+      162 | Cloris Durrell       | Ability to Speak in Animal Languages |            6
+      163 | Ingeberg Wooderson   | fall asleep anywhere                 |            0
+      164 | Vince Dendon         | Infinite Hiccups                     |            7
+      165 | La verne Scroxton    | Uncontrollable Tickling              |            3
+      166 | Even Fayerbrother    | Super Sticky Fingers                 |            2
+      167 | Lottie Oulner        | Infinite Clumsiness                  |            4
+      168 | Ker Kidman           | Unlimited Dance Moves                |            3
+      169 | Codie Warters        | Turn Anything into a Dad Joke        |            6
+      170 | Tito Naisbit         | Extreme Rubber Face Flexibility      |            5
+      171 | Tomkin Soan          | Invisible Sneeze                     |            7
+      172 | Lotty Kristoffersen  | Infinite Dad Jokes                   |           10
+      173 | Esma Penning         | Incredible Nose Hair Growth          |            6
+      174 | Tony Rime            | Incredible Juggling Skills           |            7
+      175 | Evangelia Cristea    | Invisible Air Guitar Playing         |            8
+      176 | Tyrone Beckmann      | Extreme Paper Cut                    |            8
+      177 | Sharai Vines         | Mind Reading Comedy                  |            4
+      178 | Eveline De Paoli     | handstands                           |            9
+      179 | Janel Speechley      | Infinite Dad Jokes                   |            2
+      180 | Nancey Moores        | wiggle ears                          |           10
+      181 | Hilton Budding       | Ability to Speak in Animal Languages |            9
+      182 | Rodrique Shackell    | Instantaneous Spoon Bending          |            3
+      183 | Dredi Wharby         | Mildly Annoying Whistle              |            9
+      184 | Joelie Bolmann       | Extreme Rubber Face Flexibility      |            3
+      185 | Mil Stivers          | lucky charm                          |            6
+      186 | Melissa Albers       | Uncontrollable Tickling              |            0
+      187 | Anatol Culligan      | Superhuman Lip Syncing               |            4
+      188 | Merlina Beamson      | Extreme Paper Cut                    |            5
+      189 | Ernestus Dyer        | Invisible Sneeze                     |           10
+      190 | Raquela Kalkhoven    | parallel parking                     |            0
+      191 | Bili Wilkins         | finding loose change                 |            2
+      192 | Wye Ferebee          | movie quotes                         |            6
+      193 | Jackie Preon         | lucky charm                          |            6
+      194 | Patrice Ferrier      | Super Ticklish Fingers               |            4
+      195 | Fanchon Strass       | Incredible Nose Hair Growth          |            2
+      196 | Adriano Carrick      | touch nose with tongue               |            6
+      197 | Corette Forgan       | Invisible Air Guitar Playing         |            3
+      198 | Lyndsay Schirak      | wiggle ears                          |            6
+      199 | Johnny Tambling      | lucky charm                          |           10
+      200 | Constantin Hagard    | Telepathic Yawn                      |            7
+      201 | Shannon Dougharty    | handstands                           |            2
+      202 | Orly Gasking         | fall asleep anywhere                 |            1
+      203 | Stanleigh Garwood    | Super Slow Motion                    |            6
+      204 | Flossy Thurling      | Infinite Dad Jokes                   |            7
+      205 | Patrice Philippson   | touch nose with tongue               |            9
+      206 | Kiley Hafner         | freckles on nose                     |            7
+      207 | Fabe Naden           | Instantaneous Costume Changes        |            0
+      208 | Jarrod Lorriman      | Super Speed Typing                   |            1
+      209 | Reena Dunkersley     | lucky charm                          |            3
+      210 | Julianna Togwell     | Super Slow Motion                    |            2
+      211 | Joanna Cogdon        | Uncontrollable Tickling              |            9
+      212 | Jemmie Cannop        | knowing when it's going to rain      |            2
+      213 | Deane Blinkhorn      | Telepathic Yawn                      |            6
+      214 | Lowrance Brattell    | Instantaneous Costume Changes        |           10
+(214 rows)
+
