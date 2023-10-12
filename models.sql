@@ -298,6 +298,18 @@ from london_models;
 select * from models_brands;
 
 --Question 2:
-SELECT * FROM models
-JOIN models_brands ON models.model_id = models_brands.model_id
-WHERE agent = 'Verity' AND brand_name = 'Dior'
+SELECT * FROM second_form_models
+JOIN models_brands ON second_form_models.model_id = models_brands.model_id
+WHERE agent = 'Verity' AND brand_name = 'Dior';
+
+UPDATE second_form_models
+SET agent = 'Verity''s Assistant'
+FROM models_brands
+WHERE second_form_models.model_id = models_brands.model_id 
+AND
+agent = 'Verity' AND brand_name = 'Dior';
+
+
+SELECT * FROM second_form_models
+JOIN models_brands ON second_form_models.model_id = models_brands.model_id
+WHERE agent = 'Verity''s Assistant' AND brand_name = 'Dior';

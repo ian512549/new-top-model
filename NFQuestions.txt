@@ -1188,8 +1188,14 @@ INSERT 0 32
               260 |      201 | Atlantis Doromania
 (260 rows)
 
- model_id | model_name | area  | price_per_event | category | agent  |             brand              |    trait    | rating | next_event_date | revenue | models_brands_id | model_id | brand_name 
-----------+------------+-------+-----------------+----------+--------+--------------------------------+-------------+--------+-----------------+---------+------------------+----------+------------
-       11 | Hannah Bee | Milan |             325 | Fashion  | Verity | Chanel, Dior, Stella McCartney | Photography |      6 | 1 March 2022    |    1625 |              227 |       11 | Dior
+ model_id | model_name | area  | price_per_event | category | agent  |    trait    | rating | next_event_date | revenue | models_brands_id | model_id | brand_name 
+----------+------------+-------+-----------------+----------+--------+-------------+--------+-----------------+---------+------------------+----------+------------
+       11 | Hannah Bee | Milan |             325 | Fashion  | Verity | Photography |      6 | 1 March 2022    |    1625 |              227 |       11 | Dior
+(1 row)
+
+UPDATE 1
+ model_id | model_name | area  | price_per_event | category |       agent        |    trait    | rating | next_event_date | revenue | models_brands_id | model_id | brand_name 
+----------+------------+-------+-----------------+----------+--------------------+-------------+--------+-----------------+---------+------------------+----------+------------
+       11 | Hannah Bee | Milan |             325 | Fashion  | Verity's Assistant | Photography |      6 | 1 March 2022    |    1625 |              227 |       11 | Dior
 (1 row)
 
